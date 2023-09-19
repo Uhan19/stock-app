@@ -1,1 +1,0 @@
-// Write your Single Card component here
