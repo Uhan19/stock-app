@@ -32,29 +32,35 @@ export const Slider = () => {
     <>
       {marketSummaryData ? (
         <div className="slider">
-          {marketSummaryData.map((item, index) => {
-            return item.regularMarketChange.raw > 0 ? (
-              <span className="slider-market-raw" key={index}>
-                <span className="slider-name">{item.shortName}</span>{' '}
-                {item.regularMarketPrice.fmt}
-                <span style={{ color: 'green' }}>
-                  {' '}
-                  +{item.regularMarketChange.fmt} (+
-                  {item.regularMarketChangePercent.fmt})
+          <div>
+            {marketSummaryData.map((item, index) => {
+              return item.regularMarketChange.raw > 0 ? (
+                <span className="slider-market-raw" key={index}>
+                  <span className="slider-name">
+                    {item.shortName}
+                  </span>{' '}
+                  {item.regularMarketPrice.fmt}
+                  <span style={{ color: 'green' }}>
+                    {' '}
+                    +{item.regularMarketChange.fmt} (+
+                    {item.regularMarketChangePercent.fmt})
+                  </span>
                 </span>
-              </span>
-            ) : (
-              <span className="slider-market-raw" key={index}>
-                <span className="slider-name">{item.shortName}</span>{' '}
-                {item.regularMarketPrice.fmt}
-                <span style={{ color: 'red' }}>
-                  {' '}
-                  {item.regularMarketChange.fmt} (
-                  {item.regularMarketChangePercent.fmt})
+              ) : (
+                <span className="slider-market-raw" key={index}>
+                  <span className="slider-name">
+                    {item.shortName}
+                  </span>{' '}
+                  {item.regularMarketPrice.fmt}
+                  <span style={{ color: 'red' }}>
+                    {' '}
+                    {item.regularMarketChange.fmt} (
+                    {item.regularMarketChangePercent.fmt})
+                  </span>
                 </span>
-              </span>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       ) : (
         <div>Loading...</div>

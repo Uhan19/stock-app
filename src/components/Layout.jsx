@@ -6,8 +6,8 @@ import { Outlet } from 'react-router-dom';
 export const Layout = ({ children }) => {
   return (
     <>
-      <Header />
       <Slider />
+      <Header />
       <main>{children}</main>
       <Outlet />
     </>

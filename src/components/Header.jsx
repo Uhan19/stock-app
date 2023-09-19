@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 export const Header = () => {
   return (
     <div className="navbar header">
-      <Link to="/">
-        <h3>Stock Market App</h3>
-      </Link>
+      <div className="navbar-header header-center">
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <h3 className="header-title">Stock Market App</h3>
+        </Link>
+      </div>
     </div>
   );
 };
